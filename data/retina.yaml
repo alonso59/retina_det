@@ -1,0 +1,8 @@
+path: datasets/retina  # dataset root dir
+train: train.txt  # train images (relative to 'path') 960 images
+val: val.txt  # val images (relative to 'path') 240 images
+test: #
+
+# Classes
+nc: 2  # number of classes
+names: ['macula', 'OD']  # class names
