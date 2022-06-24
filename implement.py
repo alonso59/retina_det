@@ -50,8 +50,7 @@ def impl(
     macula = 0
     od = 0
     for i, det in enumerate(pred):
-
-        annotator = Annotator(im0, line_width=2, example=str(names))
+        annotator = Annotator(im0, line_width=int(im0.shape[0]*0.0025), example=str(names))
         det[:, :4] = scale_coords(im.shape[2:], det[:, :4], im0.shape).round()
         for *xyxy, conf, cls in reversed(det):
             if cls == 1:
